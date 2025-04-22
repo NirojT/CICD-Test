@@ -6,6 +6,9 @@
 # separate terms of service, privacy policy, and support
 # documentation is now.
 
+
+
+
 name: CICD Flow Practice
 
 on:
@@ -29,5 +32,18 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean install
+
+
+
+    - name: Build and push Docker images
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+         image: workert/cicd-practise
+         tags: latest
+         registry: docker.io
+         dockerfile: DockerFile
+         username: ${{ secrets.DOCKER_USERNAME }}
+         password: ${{ secrets.DOCKER_PASSWORD }}
+
 
  

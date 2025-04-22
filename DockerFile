@@ -1,0 +1,6 @@
+FROM openJDK:20
+
+WORKDIR /app
+EXPOSE 8080
+ADD ./target/springboot-image.jar /app/springboot-image.jar
+ENTRYPOINT ["java","-jar","springboot-image.jar"]
