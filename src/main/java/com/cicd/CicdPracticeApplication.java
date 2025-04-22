@@ -12,7 +12,7 @@ public class CicdPracticeApplication {
 
 	@GetMapping("/")
 	public String home() {
-		return "Hello World";
+		return "bon jouir";
 	}
 
 	public static void main(String[] args) {
