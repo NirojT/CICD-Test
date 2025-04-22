@@ -12,7 +12,7 @@ public class CicdPracticeApplication {
 
 	@GetMapping("/")
 	public String home() {
-		return "bon jouir";
+		return "postgress done";
 	}
 
 	public static void main(String[] args) {
